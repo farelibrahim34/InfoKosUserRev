@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_background"
+    tools:context=".view.DetailPiActivity">
+
+    <TextView
+        android:id="@+id/txtUpdate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvArraowDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_bg_second"
+        android:outlineAmbientShadowColor="@color/warna_button"
+        android:outlineSpotShadowColor="@color/warna_button"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackDetail"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerHomeDetail"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvArraowDetail" />
+
+    <LinearLayout
+        android:id="@+id/dots2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerHomeDetail" />
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicatorBannerDetail"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginVertical="10dp"
+        app:ci_drawable="@drawable/circle_radius_selected"
+        app:ci_drawable_unselected="@drawable/circle_radius_unselected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerHomeDetail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtKos">
+
+        <TextView
+            android:id="@+id/txtAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="TextView"
+            android:textColor="@color/warna_primary_font"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Deskripsi :"
+            android:textColor="@color/warna_primary_font" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/baseline_location_on_24" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/txtKos"
+        style="@style/firstbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:clickable="false"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Nama Kos"
+        android:textColor="@color/warna_primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicatorBannerDetail" />
+
+    <Button
+        android:id="@+id/btnNomorHp"
+        style="@style/firstbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="NoHp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnPesan"
+        style="@style/firstbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Pesan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNomorHp">
+
+
+    </Button>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Informasi lebih lanjut tekan tombol di bawah ini"
+        android:textAlignment="center"
+        android:textColor="@color/warna_primary_font"
+        app:layout_constraintBottom_toTopOf="@+id/btnNomorHp"
+        app:layout_constraintEnd_toEndOf="@+id/btnNomorHp"
+        app:layout_constraintStart_toStartOf="@+id/btnNomorHp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
